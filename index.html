@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="css\style.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand highscore-link" href="#">High Scores</a>
+
+                <ul class="navbar-nav mr-auto mb-md-0">
+                    <li class="nav-item timer" id="currentTime"></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- QUIZ CONTAINER -->
+    <div class="container question-container">
+        <div class="row main-div-margin quiz-box-margin">
+            <div class="col-md-12 main-content-box quiz-box">
+                <div id="wrapper">
+                    <div id="questionsDiv">
+                        <h2>Here's What's Going On!</h2>
+                        <hr>
+                        <p>
+                            Try to answer the following code-related questions within the TWO minute time limit. Note that incorrect answers will deduct 5 seconds from the total alotted quiz time! You got this!
+                        </p>
+                        <ul id="choicesUl"></ul>
+                        <button id="start" class="btn">Let's Begin</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- QUIZ PANEL START -->
+    <div class="panel">
+        <div class="result">
+        
+        <!-- QUESTION CONTAINER -->
+        </div>
+        <div class="question-container" id="question">
+            Question goes here.
+        </div>
+        <!-- RESPONSE OPTION CONTAINER -->
+        <div class="option-container">
+            <button class="option" onclick="" id="op1">option1</button>
+      
+            <button class="option" id="op2">option2</button>
+      
+            <button class="option" id="op3">option3</button>
+      
+            <button class="option" id="op4">option4</button>
+        </div>
+        <!-- NAVIGATION CONTAINER -->
+        <div class="navigation">
+            <button class="evaluate">Check Your Answer</button>
+            <button class="next">Next Question</button>
+        </div>
+    </div>
+
+
+    <!-- PLAYER INFO -->
+    <div id="inputForm" class="w3-container hide">
+
+        <h1>You've reached the end of the quiz!</h1>
+
+        <h2>You scored <span id="scoreButton" class="btn">Score</span> points!</h2>
+            <form>
+                <label for="initalsBox">Enter Your Initals Here to Save Your Results:</label></br>
+                <input id="initalsBox" type="text" maxlength="3"></br>
+                <input id="submitBtn" type="submit" class="btn">
+            </form>
+
+    </div>
+
+
+    <!-- SCORE CONTAINTER -->
+    <div class="container scores-container d-none">
+        <div class="row main-div-margin quiz-box-margin">
+          <div class="col-md-12 main-content-box quiz-box">
+            <div id="wrapper">
+              <div id="currentTime">
+                </div>
+                  <div id="questionsDiv">
+                    <h2>Highscores</h2>
+                    <hr>
+                    <ul id="highScore"></ul>
+                    <!-- BUTTON--> -->
+                    <button id="clear" value="reset" class="btn">Clear Highscore</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+    <!-- QUIZ PANEL END -->
+</body>
+</html>
